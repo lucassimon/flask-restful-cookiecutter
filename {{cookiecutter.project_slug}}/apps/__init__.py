@@ -10,7 +10,8 @@ from flask_cors import CORS
 from apps.messages import Messages
 
 # Local
-
+from .db import db
+from .jwt import configure_jwt
 from .api import configure_api
 from .cache import configure_cache
 
@@ -44,7 +45,15 @@ def create_app(config_name):
 
     CORS(app, resources={r"/*": {"origins": "*"}})
 
+    # Configure MongoEngine
+    db.init_app(app)
+
+    # Configure Cache
     configure_cache(app)
+
+    # Configure JWT
+    configure_jwt(app)
+
     configure_api(app)
 
     return app
