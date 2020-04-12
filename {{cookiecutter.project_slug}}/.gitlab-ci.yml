@@ -1,0 +1,36 @@
+image: "python:3.6"
+
+
+before_script:
+  - python --version
+  - pip install --user poetry
+
+stages:
+  - static
+  - test
+  - deploy
+
+pycodestyle:
+  stage: static
+  script:
+    - make pycodestyle
+
+pytest:
+  stage: test
+  script:
+    - make coverage
+
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "improve your scripts here"
+  only:
+    - master
+
+deploy_production:
+  stage: deploy
+  script:
+    - echo "improve your scripts here"
+  only:
+    - tags

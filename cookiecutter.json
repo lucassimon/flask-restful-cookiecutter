@@ -1,0 +1,18 @@
+{
+  "full_name": "Lucas Simon",
+  "email": "lucassrod@gmail.com",
+  "github_username": "lucassimon",
+  "project_name": "Flask API Restful Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_short_description": "Flask API Restful Boilerplate contains all the boilerplate you need to create a API.",
+  "version": "0.1.0",
+  "use_pytest": "y",
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ]
+}

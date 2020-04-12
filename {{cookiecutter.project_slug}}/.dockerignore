@@ -1,0 +1,12 @@
+*.py[cod]
+.git
+.venv/
+tests/
+static/
+Dockerfile
+Dockerfile-prd
+Dockerfile-prd-multistage
+.gitignore
+README.md
+.env
+__pycache__/
