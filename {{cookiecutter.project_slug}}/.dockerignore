@@ -1,5 +1,6 @@
 *.py[cod]
 .git
+.gitignore
 .venv/
 tests/
 static/
